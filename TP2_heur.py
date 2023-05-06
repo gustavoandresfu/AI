@@ -23,3 +23,4 @@ while i < len(matrix):
         break
     else:  # 0
         j += 1
+#ok
