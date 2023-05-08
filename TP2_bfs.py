@@ -60,7 +60,7 @@ espacio = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ]
 
-nodo_inicial = (4, 6)
+nodo_inicial = (0, 0)
 objetivo = 1
 
 resultado = bfs(espacio, nodo_inicial, objetivo)

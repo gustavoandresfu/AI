@@ -60,6 +60,7 @@ espacio = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ]
 
+#Aqui tomamos el nodo central de la matriz como inicio
 num_rows = len(espacio)
 num_cols = len(set(len(row) for row in espacio))
 mid_row = num_rows // 2
