@@ -1,7 +1,7 @@
 from collections import deque
 
-def bfs(espacio, nodo_inicial, objetivo):
-    cola = deque([nodo_inicial])
+def bfs(grafo, objetivo):
+    cola = deque(["B1"])
     visitado = set()
 
     while cola:
@@ -11,61 +11,35 @@ def bfs(espacio, nodo_inicial, objetivo):
             continue
 
         visitado.add(nodo)
-        print(nodo , end = ' ')  # Imprimo el nodo para conocer el avance
-        if espacio[nodo[0]][nodo[1]] == objetivo:
+        print(" -> " + nodo , end = ' ')  # Imprimo el nodo para conocer el avance
+        if nodo == objetivo:
             return nodo
 
-        adyacentes = ver_adyacentes(nodo, espacio)
+        adyacentes = grafo[nodo]
         for vecino in adyacentes:
             if vecino not in visitado:
                 cola.append(vecino)
 
     return None
 
-def ver_adyacentes(nodo, espacio):
-    row, col = nodo
-    rows = len(espacio)
-    cols = len(espacio[0])
+grafo = {
+    "B1": ["B2"],
+    "B2": ["B1", "B3"],
+    "B3": ["B2", "B4"],
+    "B4": ["B3", "B5"],
+    "B5": ["B4", "B6"],
+    "B6": ["B5", "B7"],
+    "B7": ["B6", "B8"],
+    "B8": ["B7", "A1"],
+    "A1": ["B8", "B10"], #aqui pongo el objetivo a encontrar
+    "B10": ["A1"]
+}
 
-    adyacentes = []
+objetivo = "A1"
 
-    # check der vecino
-    if col + 1 < cols:
-        adyacentes.append((row, col + 1))
-
-    # check izq vecino
-    if col - 1 >= 0:
-        adyacentes.append((row, col - 1))
-
-    # check abajo vecino
-    if row + 1 < rows:
-        adyacentes.append((row + 1, col))
-
-    # check arriba vecino
-    if row - 1 >= 0:
-        adyacentes.append((row - 1, col))
-
-    return adyacentes
-
-espacio = [
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-]
-
-nodo_inicial = (0, 0)
-objetivo = 1
-
-resultado = bfs(espacio, nodo_inicial, objetivo)
+resultado = bfs(grafo,  objetivo)
 
 if resultado:
-    print(f"\n El objetivo fue encontrado en  coordenadas: {resultado}")
+    print(f"\n El objetivo fue encontrado en el nodo: {resultado}")
 else:
     print("El objetivo no fue encontrado")
