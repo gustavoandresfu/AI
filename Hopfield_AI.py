@@ -87,7 +87,6 @@ limpiar_patron_circular = limpiar_patron_circular.reshape(patron_entrada.shape)
 limpiar_patron_circular2 = identificar_patron(patron_entrada2.flatten(), pesos)
 limpiar_patron_circular2 = limpiar_patron_circular2.reshape(patron_entrada2.shape)
 
-# Paso 4: Evaluación y visualización
 # Imprimir el patrón original y el patrón reconstruido y limpio
 # Doy dos salidas para interpretar los resultados
 print("Patrón entrada 1:")
