@@ -59,7 +59,7 @@ def identificar_patron(imagen, pesos):
     return n_estado
 
 # Ruta de la imagen de patrón  de entrada
-ruta_patron_entrada = "TP3/Original/imagen_motor.jpg"
+ruta_patron_entrada = "Original/imagen_motor.jpg"
 
 # Cargar imagen de patrón  de entrada y convertirla en una matriz
 patron_entrada = cargar_imagen_ruta(ruta_patron_entrada)
@@ -68,17 +68,17 @@ patron_entrada = cargar_imagen_ruta(ruta_patron_entrada)
 pesos = entrenar_hopfield(patron_entrada.flatten())
 
 # Ruta de la imagen de patrón desconocido
-ruta_patron_desconocido =  "TP3/Muestras/imagen_zoom.jpg"
-#ruta_patron_desconocido = "TP3/Muestras/imagen_abajo_der.jpg"
-#ruta_patron_desconocido = "TP3/Muestras/imagen_arriba_izq.jpg"
-#ruta_patron_desconocido = "TP3/Muestras/imagen_perfiljpg"
-#ruta_patron_desconocido = "TP3/Muestras/imagen_zoom.jpg"
+ruta_patron_desconocido =  "Muestras/imagen_zoom.jpg"
+#ruta_patron_desconocido = "Muestras/imagen_abajo_der.jpg"
+#ruta_patron_desconocido = "Muestras/imagen_arriba_izq.jpg"
+#ruta_patron_desconocido = "Muestras/imagen_perfiljpg"
+#ruta_patron_desconocido = "Muestras/imagen_zoom.jpg"
 
 #Estas imagenes no se encuentra el patron:
 
-#ruta_patron_desconocido = "TP3/Muestras/imagen_negro.jpg"
-#ruta_patron_desconocido = "TP3/Muestras/imagen_blanco.jpg"
-#ruta_patron_desconocido = "TP3/Muestras/imagen_arriba_izq_sin_luz.jpg"
+#ruta_patron_desconocido = "Muestras/imagen_negro.jpg"
+#ruta_patron_desconocido = "Muestras/imagen_blanco.jpg"
+#ruta_patron_desconocido = "Muestras/imagen_arriba_izq_sin_luz.jpg"
 
 
 # Cargar imagen de patrón desconocido y convertirla en una matriz
