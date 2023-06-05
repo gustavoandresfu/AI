@@ -76,9 +76,9 @@ ruta_patron_desconocido =  "TP3/Muestras/imagen_zoom.jpg"
 
 #Estas imagenes no se encuentra el patron:
 
-#ruta_patron_desconocido = "Muestras/imagen_negro.jpg"
-#ruta_patron_desconocido = "Muestras/imagen_blanco.jpg"
-#ruta_patron_desconocido = "Muestras/imagen_arriba_izq_sin_luz.jpg"
+#ruta_patron_desconocido = "TP3/Muestras/imagen_negro.jpg"
+#ruta_patron_desconocido = "TP3/Muestras/imagen_blanco.jpg"
+#ruta_patron_desconocido = "TP3/Muestras/imagen_arriba_izq_sin_luz.jpg"
 
 
 # Cargar imagen de patrón desconocido y convertirla en una matriz
